@@ -1,0 +1,314 @@
+* {
+  box-sizing: border-box
+}
+body {
+  margin: 0;
+  background: #202039;
+  color: #f5f1ff;
+  font: 16px 'Wix Madefor Text',sans-serif
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+  gap: 25px
+}
+header strong {
+  font: 500 34px Oswald
+}
+h1 {
+  font: 400 35px/1.2 Oswald;
+  margin: 0
+}
+header p {
+  line-height: 1.6
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(5,minmax(0,1fr));
+  gap: 22px;
+  padding: 0 40px
+}
+.phase {
+  font-size: 16px;
+  margin: 0 0 14px;
+  color: #d1c9e7
+}
+article {
+  height: 708px;
+  border: 1px solid #615b7b;
+  border-radius: 30px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  background: #292840;
+  scroll-margin: 20px
+}
+.status {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px
+}
+p {
+  line-height: 1.5
+}
+h2 {
+  font: 400 39px/1.15 Oswald;
+  margin: 12px 0 26px
+}
+h3 {
+  font: 400 30px Oswald;
+  margin: 20px 0 0
+}
+button {
+  font: 500 16px 'Wix Madefor Text';
+  border: 0;
+  border-radius: 24px;
+  min-height: 48px;
+  padding: 12px 16px;
+  background: #c9b9ff;
+  color: #202039;
+  cursor: pointer
+}
+button:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 3px
+}
+article>button:last-of-type {
+  margin-top: auto
+}
+small {
+  font-size: 14px;
+  margin-top: 14px
+}
+.rhythm {
+  margin: 36px -10px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px
+}
+.rhythm span {
+  font: 500 60px/1.2 Oswald;
+  letter-spacing: -1px
+}
+.rhythm span:nth-child(2) {
+  color: #c9b9ff;
+  font-size: 49px
+}
+.rhythm span:last-child {
+  padding-left: 57px
+}
+.date {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px
+}
+.date strong {
+  font: 500 80px/1 Oswald;
+  color: #c9b9ff
+}
+.date span {
+  line-height: 1.5
+}
+.classrow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+  background: transparent;
+  color: #f5f1ff;
+  border-radius: 0;
+  border-bottom: 1px solid #615b7b;
+  padding: 22px 0
+}
+.classrow b {
+  font: 400 25px Oswald
+}
+.classrow span {
+  font-size: 18px
+}
+.classrow small {
+  display: block;
+  color: #d1c9e7;
+  margin-top: 8px
+}
+.classrow[aria-pressed=true] {
+  border-left: 3px solid #c9b9ff;
+  padding-left: 12px
+}
+dl div {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid #615b7b
+}
+dd {
+  margin: 0
+}
+.zero {
+  font: 400 100px/1 Oswald;
+  color: #c9b9ff
+}
+.zero span {
+  display: block;
+  font: 16px 'Wix Madefor Text';
+  margin-top: 12px
+}
+.secondary {
+  background: #474260;
+  color: #f5f1ff
+}
+#waitlist {
+  margin-top: 15px
+}
+#wait-feedback {
+  font-size: 14px;
+  color: #ded5f7;
+  min-height: 42px
+}
+.alternative {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  border-top: 1px solid #615b7b;
+  padding-top: 16px
+}
+.alternative b {
+  font: 400 28px Oswald
+}
+.alternative p {
+  grid-column: 1/-1;
+  margin: 8px 0 15px
+}
+.pass {
+  background: #c9b9ff;
+  color: #202039;
+  border-color: #c9b9ff
+}
+.pass .secondary {
+  background: #202039
+}
+.reservation {
+  border-block: 1px solid #796c9f;
+  padding: 20px 0
+}
+.reservation b {
+  font: 400 78px/1 Oswald
+}
+.passline {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px dashed #796c9f;
+  margin-top: 28px;
+  padding-top: 20px;
+  gap: 8px
+}
+.note {
+  font-size: 14px
+}
+footer {
+  padding: 24px 40px;
+  font-size: 14px;
+  color: #d1c9e7
+}
+@media(max-width:1000px) {
+  header {
+    padding: 25px 20px;
+    align-items: flex-start;
+    flex-wrap: wrap
+  }
+  h1 {
+    font-size: 28px
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding: 0 20px
+  }
+  article,.phase {
+    max-width: 430px;
+    margin-left: auto;
+    margin-right: auto
+  }
+  article {
+    width: 100%
+  }
+  .rhythm span {
+    font-size: 56px
+  }
+  .rhythm span:nth-child(2) {
+    font-size: 46px
+  }
+  footer {
+    padding: 24px 20px
+  }
+}
+/* Состояние без мест и бронь помещаются без внутренней прокрутки. */
+#wait h2 {
+  margin-bottom: 14px
+}
+#wait .zero {
+  font-size: 80px
+}
+#wait .zero span {
+  margin-top: 8px
+}
+#wait>p {
+  margin: 12px 0
+}
+#wait .alternative {
+  padding-top: 12px
+}
+#wait .alternative p {
+  margin-bottom: 10px
+}
+.pass h2 {
+  font-size: 34px;
+  margin-bottom: 18px
+}
+.pass .reservation {
+  padding: 14px 0
+}
+.pass .reservation b {
+  font-size: 66px
+}
+.pass .passline {
+  margin-top: 16px;
+  padding-top: 16px
+}
+.pass h3 {
+  margin-top: 14px
+}
+.pass p {
+  margin: 12px 0
+}
+
+@media (min-width: 1001px) and (max-width: 1800px) {
+  main {
+    grid-template-columns: repeat(2, minmax(0, 430px));
+    justify-content: center;
+  }
+}
+
+/* Task 12: complete screens. */
+@media(min-width:1001px){header{height:130px;padding:20px 40px;gap:24px}header h1{font-size:30px}header p{font-size:14px}main.flow,body>main{display:grid;grid-template-columns:repeat(3,340px);justify-content:center;align-items:start;gap:48px 42px;padding:0 40px 40px}main>section{min-width:0}main article{width:340px;height:708px;margin:0 auto}main>section>p:first-child{height:24px;margin:0 0 12px}}
+@media(min-width:1001px){main>section:first-child{grid-column:span 2}main>section:first-child>p{text-align:center}}@media(min-width:1001px){main article{border:2px solid #c9b9ff;box-shadow:0 0 32px #c9b9ff20}}
+
+@media(min-width:1001px){body{padding-bottom:160px}}
+
+/* Задание 15: самостоятельные визуальные материалы. */
+.visual-hero img{filter:brightness(1.16)}
+.visual-hero{margin:0 0 18px;position:relative;overflow:hidden;flex:0 0 225px;min-height:0;border-radius:30px 4px 30px 4px}
+.visual-hero img{display:block;width:100%;height:225px;object-fit:cover}
+.visual-story{margin:24px auto 0;max-width:340px;overflow:hidden;border-radius:30px 4px 30px 4px}
+.visual-story img{display:block;width:100%;height:190px;object-fit:cover}
+.visual-story figcaption{font-size:14px;line-height:1.4;padding:12px 0}
+.visual-reference{max-width:340px;margin:20px auto;overflow:hidden}.visual-reference>svg{width:100%;height:190px}.visual-reference>div{margin:0}
+.visual-disclosure{font-size:14px;line-height:1.5}
+.visual-hero img{transition:transform .7s}.visual-hero:hover img{transform:scale(1.06)}
+@media(max-width:1000px){.visual-story,.visual-reference{max-width:430px}.visual-hero{flex-basis:225px}}
+@media(prefers-reduced-motion:reduce){.visual-hero img,.visual-story img,.visual-hero:after{animation:none!important;transition:none!important;transform:none!important;clip-path:none!important;opacity:1!important}}

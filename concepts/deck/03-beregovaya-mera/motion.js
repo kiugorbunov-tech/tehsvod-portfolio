@@ -1,0 +1,2 @@
+// Движение Береговая мера; при изменении системной настройки эффекты прекращаются.
+(()=>{const media=matchMedia('(prefers-reduced-motion: reduce)');if(media.matches||matchMedia('(max-width:700px)').matches)return;const cover=document.querySelector('.cover'),hero=cover.querySelector('.v-image');hero.animate([{transform:'scale(1.06)'},{transform:'scale(1)'}],{duration:6000,easing:'ease-out',fill:'both'});media.addEventListener('change',()=>{if(media.matches){document.getAnimations().forEach(a=>a.cancel());hero.style.transform='none';location.reload()}})})();

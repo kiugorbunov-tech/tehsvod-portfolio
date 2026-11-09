@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Водомерика — доставка воды</title>
+    <link rel="stylesheet" href="../../../fonts-lib/fonts.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <div class="wordmark">водомерика<span>вода для дома</span>
+      </div>
+      <h1>Запас воды.<br>За пару касаний.</h1>
+      <p>От первого входа до доставки<br>Мини-приложение от 180 000 ₽</p>
+    </header>
+    <main class="flow">
+      <section class="step">
+        <p class="caption">1. Вход</p>
+        <article class="phone" id="entry">
+          <div class="status">9:41 <span>● ▰</span>
+          </div>
+          <p class="brand">водомерика</p>
+          <h2>Вода будет<br>дома</h2>
+          <figure class="visual-hero" data-motion="zoom"><img src="assets/hero.jpg" width="1536" height="1024" alt="Прозрачная бутыль питьевой воды" fetchpriority="high"></figure>
+          <p>Привезём полные бутыли.<br>Заберём пустые.</p>
+          <button data-next="water">Войти в демо</button>
+          <small>Без номера телефона</small>
+        </article>
+      </section>
+      <section class="step">
+        <p class="caption">2. Объём</p>
+        <article class="phone" id="water">
+          <div class="status">9:41 <span>● ▰</span>
+          </div>
+          <p class="brand">Ваш запас</p>
+          <h2>Сколько<br>привезти?</h2>
+          <div class="volume">
+            <b>19</b>
+            <span>литров в бутыли</span>
+          </div>
+          <p>Питьевая вода<br>Без газа</p>
+          <div class="counter">
+            <button id="less" aria-label="Уменьшить количество">−</button>
+            <output id="count">2</output>
+            <button id="more" aria-label="Увеличить количество">+</button>
+          </div>
+          <p class="summary">
+            <span>За воду</span>
+            <b id="cost">780 ₽</b>
+          </p>
+          <button data-next="address">Выбрать адрес</button>
+        </article>
+        <figure class="visual-story" data-motion="zoom"><img src="assets/process.jpg" width="1536" height="1024" loading="lazy" alt="Вода в домашней кухне"><figcaption>Вода в домашней кухне</figcaption></figure>
+      </section>
+      <section class="step">
+        <p class="caption">3. Адрес</p>
+        <article class="phone" id="address">
+          <div class="status">9:41 <span>● ▰</span>
+          </div>
+          <p class="brand">Куда доставить</p>
+          <h2>Добавьте<br>первый адрес</h2>
+          <div class="empty">
+            <span>⌂</span>
+            <p>Сохранённых адресов пока нет.<br>Укажите дом и квартиру.</p>
+          </div>
+          <form id="address-form">
+            <label>Улица и дом<input id="street" required placeholder="Например, улица Лесная, 8">
+            </label>
+            <label>Квартира<input id="flat" required inputmode="numeric" placeholder="Номер квартиры">
+            </label>
+            <button>Сохранить адрес</button>
+          </form>
+          <p class="hint">Адрес используется только в этой демоверсии.</p>
+        </article>
+      </section>
+      <section class="step">
+        <p class="caption">4. Доставка</p>
+        <article class="phone" id="delivery">
+          <div class="status">9:41 <span>● ▰</span>
+          </div>
+          <p class="brand">Удобное время</p>
+          <h2>Завтра,<br>7 ноября</h2>
+          <div class="slots" role="group" aria-label="Интервал доставки">
+            <button aria-pressed="true">09–13</button>
+            <button aria-pressed="false">13–17</button>
+            <button aria-pressed="false">17–21</button>
+          </div>
+          <label class="return">
+            <input type="checkbox" checked id="return"> Верну пустые бутыли</label>
+          <p class="hint">В демозаказе залог за тару не рассчитывается.</p>
+          <div class="receipt">
+            <p>Вода <b id="bill">780 ₽</b>
+            </p>
+            <p>Доставка <b>0 ₽</b>
+            </p>
+            <p>Оплата <b>При получении</b>
+            </p>
+          </div>
+          <button id="order">Оформить демозаказ</button>
+        </article>
+      </section>
+      <section class="step">
+        <p class="caption">5. Результат</p>
+        <article class="phone final" id="result">
+          <div class="status">9:41 <span>● ▰</span>
+          </div>
+          <div class="check">✓</div>
+          <h2 id="result-title">Так выглядит<br>готовый заказ</h2>
+          <p class="ticket">Демо № В-104</p>
+          <div class="arrival">
+            <span>Завтра</span>
+            <strong id="interval">09–13</strong>
+            <span>Курьер привезёт воду</span>
+          </div>
+          <p id="destination">Адрес появится после заполнения</p>
+          <p id="ordered">2 бутыли по 19 литров</p>
+          <button data-next="water" class="secondary">Изменить демозаказ</button>
+          <small>Пример — концепт для портфолио</small>
+          <p class="hint" id="notice" aria-live="polite">Заказ в службу доставки не отправляется.</p>
+        </article>
+        <figure class="visual-story" data-motion="zoom"><img src="assets/detail.jpg" width="1536" height="1024" loading="lazy" alt="Капли на поверхности бутыли"><figcaption>Капли на поверхности бутыли</figcaption></figure>
+      </section>
+    </main>
+    <footer>Водомерика · концепт приложения доставки питьевой воды<p class="visual-disclosure">Изображения — ИИ-визуализации для концепта.</p></footer>
+    <script src="script.js">
+    </script>
+  </body>
+</html>
+

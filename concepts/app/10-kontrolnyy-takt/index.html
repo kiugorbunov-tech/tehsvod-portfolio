@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Контрольный такт — обход оборудования</title>
+    <link rel="stylesheet" href="../../../fonts-lib/fonts.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <div class="logo">Контрольный такт<span>Мобильный журнал обходов</span>
+      </div>
+      <h1>Узел за узлом.<br>До закрытого обхода.</h1>
+      <p>MVP приложения<br>от 385 000 ₽</p>
+    </header>
+    <main>
+      <section>
+        <p class="phase">1. Допуск к смене</p>
+        <article id="entry">
+          <div class="status">9:41 <span>● ▰</span>
+          </div>
+          <p class="facility">Участок водоподготовки</p>
+          <h2>Видеть узел.<br>Помнить<br>каждую точку.</h2>
+          <figure class="visual-hero" data-motion="beam"><img src="assets/hero.jpg" width="1536" height="1024" alt="Промышленная насосная установка" fetchpriority="high"></figure>
+          <p>Проверки и замечания<br>в одном маршрутном листе.</p>
+          <button data-go="route">Начать демосмену</button>
+        </article>
+      </section>
+      <section>
+        <p class="phase">2. Маршрут</p>
+        <article id="route">
+          <div class="status">9:41 <span>● ▰</span>
+          </div>
+          <p class="facility">Утренний обход</p>
+          <h2>Насосный<br>узел Н-04</h2>
+          <ol class="route">
+            <li>
+              <span>1</span>
+              <div>
+                <b>Внешний осмотр</b>
+                <p>Корпус и соединения</p>
+              </div>
+            </li>
+            <li>
+              <span>2</span>
+              <div>
+                <b>Органы управления</b>
+                <p>Индикация и маркировка</p>
+              </div>
+            </li>
+            <li>
+              <span>3</span>
+              <div>
+                <b>Рабочая зона</b>
+                <p>Доступ и ограждения</p>
+              </div>
+            </li>
+          </ol>
+          <p class="hint">Учебный чек-лист интерфейса. Производственный регламент задаётся отдельно.</p>
+          <button data-go="checklist">Открыть чек-лист</button>
+        </article>
+        <figure class="visual-story" data-motion="beam"><img src="assets/process.jpg" width="1536" height="1024" loading="lazy" alt="Манометр и стальной клапан"><figcaption>Манометр и стальной клапан</figcaption></figure>
+        <div class="visual-reference"><svg class="diagram" viewBox="0 0 280 210" role="img" aria-label="Мнемосхема насосного узла с тремя точками контроля">
+            <g stroke="#8ed3e0" stroke-width="3" fill="none">
+              <path d="M10 125h62m72 0h118M108 91V38h120v87"/>
+              <circle cx="108" cy="125" r="34"/>
+              <path d="m90 144 35-19-35-19zM162 112l18 13-18 13zm36 0-18 13 18 13z"/>
+              <rect x="54" y="102" width="13" height="46"/>
+              <path d="M80 169h59m-48-14v14m34-14v14"/>
+            </g>
+            <g fill="#172c38" stroke="#adc4ce">
+              <circle cx="54" cy="75" r="15"/>
+              <circle cx="180" cy="75" r="15"/>
+              <circle cx="228" cy="168" r="15"/>
+            </g>
+            <g fill="#f0f7fa" font-size="16" text-anchor="middle">
+              <text x="54" y="81">1</text>
+              <text x="180" y="81">2</text>
+              <text x="228" y="174">3</text>
+            </g>
+          </svg></div>
+      </section>
+      <section>
+        <p class="phase">3. Проверки</p>
+        <article id="checklist">
+          <div class="status">9:41 <span>● ▰</span>
+          </div>
+          <p class="facility">Н-04 / маршрутный лист</p>
+          <h2>Отметьте<br>результат</h2>
+          <div class="checkrow">
+            <p>Корпус без видимых повреждений</p>
+            <div class="choices" data-point="Корпус">
+              <button aria-pressed="true" data-value="ok">В норме</button>
+              <button aria-pressed="false" data-value="fault">Дефект</button>
+            </div>
+          </div>
+          <div class="checkrow">
+            <p>Маркировка читается</p>
+            <div class="choices" data-point="Маркировка">
+              <button aria-pressed="false" data-value="ok">В норме</button>
+              <button aria-pressed="true" data-value="fault">Дефект</button>
+            </div>
+          </div>
+          <div class="checkrow">
+            <p>Доступ к узлу свободен</p>
+            <div class="choices" data-point="Доступ">
+              <button aria-pressed="true" data-value="ok">В норме</button>
+              <button aria-pressed="false" data-value="fault">Дефект</button>
+            </div>
+          </div>
+          <button id="review">Проверить замечания</button>
+        </article>
+      </section>
+      <section>
+        <p class="phase">4. Замечание</p>
+        <article id="defect">
+          <div class="status">9:41 <span>● ▰</span>
+          </div>
+          <h2 id="defect-title">Дефект<br>без описания</h2>
+          <div class="warning" id="defect-warning">
+            <b>Добавьте пояснение</b>
+            <p>По отметке «Дефект» нельзя понять, что нужно исправить.</p>
+          </div>
+          <label>Что обнаружено<textarea id="description" placeholder="Например, повреждена наклейка с номером узла" minlength="10">
+            </textarea>
+          </label>
+          <p id="description-error" role="status">Опишите дефект минимум в 10 символах.</p>
+          <p class="hint">При опасной ситуации действуйте по регламенту участка. Деможурнал не уведомляет диспетчера.</p>
+          <button id="close">Закрыть демообход</button>
+        </article>
+      </section>
+      <section>
+        <p class="phase">5. Итог смены</p>
+        <article class="result" id="result">
+          <div class="status">9:41 <span>● ▰</span>
+          </div>
+          <p class="facility">Насосный узел Н-04</p>
+          <h2 id="result-title">Пример<br>закрытого обхода</h2>
+          <div class="metrics">
+            <div>
+              <b>3/3</b>
+              <span>пункта проверено</span>
+            </div>
+            <div>
+              <b id="fault-count">1</b>
+              <span>замечание</span>
+            </div>
+          </div>
+          <div class="log">
+            <b id="fault-heading">Маркировка</b>
+            <p id="fault-description">Пояснение появится после заполнения.</p>
+          </div>
+          <p class="hint">Замечания требуют рассмотрения ответственным специалистом.</p>
+          <button data-go="checklist" class="secondary">Вернуться к проверкам</button>
+          <small>Пример — концепт для портфолио</small>
+          <p class="hint" id="feedback" aria-live="polite">Запись в производственный журнал не отправляется.</p>
+        </article>
+        <figure class="visual-story" data-motion="beam"><img src="assets/detail.jpg" width="1536" height="1024" loading="lazy" alt="Контроль подшипникового узла"><figcaption>Контроль подшипникового узла</figcaption></figure>
+      </section>
+    </main>
+    <footer>Контрольный такт · обход, дефект и маршрутный лист<p class="visual-disclosure">Изображения — ИИ-визуализации для концепта.</p></footer>
+    <script src="script.js">
+    </script>
+  </body>
+</html>
+

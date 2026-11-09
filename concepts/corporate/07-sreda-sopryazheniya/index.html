@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Среда сопряжения — IT-интеграция</title>
+    <link rel="stylesheet" href="../../../fonts-lib/fonts.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <a class="wordmark" href="#home">
+        <span class="icon">][</span>Среда сопряжения</a>
+      <nav aria-label="Разделы">
+        <a href="#integration">Что связываем</a>
+        <a href="#work">Подход</a>
+        <a href="#documents">Документы</a>
+      </nav>
+      <a class="header-cta" href="#contact">Описать задачу</a>
+    </header>
+    <main>
+      <section class="hero" id="home">
+        <figure class="visual-hero"><img src="assets/hero.jpg" alt="Пространственная модель связанных узлов данных" width="1600" height="900" fetchpriority="high" decoding="async"></figure>
+        <div class="hero-copy">
+          <h1>Системы разные.<br> Работа общая.</h1>
+          <p>Связываем программы, процессы и людей,<br> чтобы данные проходили весь путь без ручного переноса.</p>
+          <a class="button" href="#integration">Найти точку сопряжения</a>
+        </div>
+      </section>
+      <section id="integration" class="integration" data-shot>
+        <div class="integration-heading">
+          <h2>Где сейчас<br> обрывается обмен?</h2>
+          <p>Выберите участок. Покажем, что проверяем<br> на старте интеграции.</p>
+        </div>
+        <div class="connection-workbench">
+          <div class="system-picker">
+            <button type="button" data-system="Продажи и склад" aria-pressed="true">Продажи ↔ Склад</button>
+            <button type="button" data-system="Склад и учёт" aria-pressed="false">Склад ↔ Учёт</button>
+            <button type="button" data-system="Сервис и продажи" aria-pressed="false">Сервис ↔ Продажи</button>
+          </div>
+          <div class="connection-detail">
+            <div class="endpoint" id="endpoint-left">Заказ</div>
+            <div class="connector">
+              <span>Состав · остатки · статус</span>
+              <i>
+              </i>
+            </div>
+            <div class="endpoint" id="endpoint-right">Отгрузка</div>
+            <div class="integration-result">
+              <h3 id="system-title" aria-live="polite">Продажи и склад</h3>
+              <p id="system-text">Проверяем, как заказ резервирует товар, как меняются остатки и откуда менеджер узнаёт об отгрузке.</p>
+            </div>
+          </div>
+        </div>
+      <figure class="visual-process"><img src="assets/process.jpg" alt="Серверная инфраструктура и оптические связи" width="1600" height="900" loading="lazy" decoding="async"><figcaption>Серверная инфраструктура и оптические связи</figcaption></figure>
+</section>
+      <section class="scope">
+        <h2>Интеграция<br> держится на договорённостях</h2>
+        <div class="scope-columns">
+          <article>
+            <div class="scope-icon">{ }</div>
+            <h3>Данные</h3>
+            <p>Согласуем справочники, ключи записей и источник достоверной информации.</p>
+          </article>
+          <article>
+            <div class="scope-icon">↔</div>
+            <h3>Обмен</h3>
+            <p>Определяем события, последовательность и поведение при повторной отправке.</p>
+          </article>
+          <article>
+            <div class="scope-icon">✓</div>
+            <h3>Контроль</h3>
+            <p>Делаем видимыми ошибки, задержки и результат обработки.</p>
+          </article>
+        </div>
+      <div class="technical-inset"><div class="hero-node">
+          <div class="source source-top">Продажи</div>
+          <div class="source source-left">Склад</div>
+          <div class="hub">
+            <span>Общий<br> язык данных</span>
+          </div>
+          <div class="source source-bottom">Учёт</div>
+          <div class="source source-right">Сервис</div>
+        </div></div>
+</section>
+      <section id="work" class="work">
+        <div class="work-sticky">
+          <h2>Переход<br> без слепых зон</h2>
+          <p>Работающая система требует понятного ввода и поддержки после запуска.</p>
+        </div>
+        <ol>
+          <li>
+            <h3>Разбираем текущий процесс</h3>
+            <p>Фиксируем путь данных и места ручных действий.</p>
+          </li>
+          <li>
+            <h3>Собираем проверяемый сценарий</h3>
+            <p>Описываем вход, результат и пограничные ситуации.</p>
+          </li>
+          <li>
+            <h3>Проверяем на тестовых данных</h3>
+            <p>Проверяем дубли, ошибки и восстановление обмена.</p>
+          </li>
+          <li>
+            <h3>Передаём в эксплуатацию</h3>
+            <p>Согласуем наблюдение, инструкции и порядок изменений.</p>
+          </li>
+        </ol>
+      </section>
+      <section class="recovery">
+        <h2>Когда что-то пошло<br> по другому сценарию</h2>
+        <div class="failure-log">
+          <div>
+            <span>Связь прервана</span>
+            <b>Сохраняем очередь</b>
+            <p>Операция получает понятный статус до восстановления обмена.</p>
+          </div>
+          <div>
+            <span>Данные отправлены повторно</span>
+            <b>Проверяем идентификатор</b>
+            <p>Повторная попытка должна сохранять согласованность записей.</p>
+          </div>
+          <div>
+            <span>Изменилась структура</span>
+            <b>Останавливаем некорректную обработку</b>
+            <p>Диагностика показывает, какой договорённости больше не соответствуют данные.</p>
+          </div>
+        </div>
+      <figure class="visual-detail"><img src="assets/detail.jpg" alt="Оптический разъём модульного узла" width="1600" height="900" loading="lazy" decoding="async"><figcaption>Оптический разъём модульного узла</figcaption></figure>
+</section>
+      <section class="documents" id="documents">
+        <h2>Что останется<br> у вашей команды</h2>
+        <p class="note">Пример — концепт для портфолио</p>
+        <details>
+          <summary>Условный комплект проектных документов</summary>
+          <p>Модель обмена, карта систем, сценарии приёмки и инструкция эксплуатации. Образцы обозначают состав результата, без данных реальных клиентов.</p>
+        </details>
+        <details>
+          <summary>Условные сведения о компетенциях и допусках</summary>
+          <p>В рабочем сайте размещаются подтверждённые сведения компании. Партнёрские статусы, лицензии и сертификаты в концепте не заявлены.</p>
+        </details>
+      </section>
+      <section id="contact" class="contact">
+        <div>
+          <h2>Начнём<br> с одного разрыва</h2>
+          <p>Какие программы участвуют в процессе и что приходится переносить вручную?</p>
+          <a href="mailto:link@sreda-sopryazheniya.example">link@sreda-sopryazheniya.example</a>
+          <p class="contact-note">Условный контакт проектной команды</p>
+        </div>
+        <form>
+          <label>Имя<input name="name" minlength="2" required autocomplete="name">
+          </label>
+          <label>Почта<input name="email" type="email" required autocomplete="email">
+          </label>
+          <label>Системы и проблема<textarea name="message" required rows="4">Продажи и склад. Требуется наладить обмен данными.</textarea>
+          </label>
+          <label class="consent">
+            <input name="consent" type="checkbox" required>Согласен на демонстрационную проверку формы</label>
+          <button type="submit">Проверить описание задачи</button>
+          <p role="status">
+          </p>
+        </form>
+      </section>
+    <p class="visual-disclosure">Пример — концепт для портфолио. Изображения созданы ИИ и показывают вымышленные объекты.</p>
+</main>
+    <footer>
+      <a href="#home" class="wordmark">][ Среда сопряжения</a>
+      <p>Данные доходят. Процессы сходятся.</p>
+      <a href="#work">Как проходит внедрение</a>
+    </footer>
+    <script src="script.js">
+    </script>
+  </body>
+</html>

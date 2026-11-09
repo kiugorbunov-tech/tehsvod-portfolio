@@ -1,0 +1,300 @@
+* {
+  box-sizing: border-box
+}
+body {
+  margin: 0;
+  background: #f2f4f7;
+  color: #202b3d;
+  font: 16px 'Exo 2',sans-serif
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 40px;
+  gap: 24px
+}
+.logo {
+  font: 700 36px 'Fira Sans Condensed'
+}
+.logo span {
+  display: block;
+  font: 16px 'Exo 2';
+  margin-top: 8px
+}
+h1 {
+  font: 500 38px/1.1 'Fira Sans Condensed';
+  margin: 0
+}
+header p {
+  line-height: 1.5
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(5,minmax(0,1fr));
+  gap: 24px;
+  padding: 0 40px
+}
+.step {
+  margin: 0 0 14px;
+  font-size: 16px
+}
+article {
+  background: white;
+  border-top: 5px solid #a83247;
+  border-radius: 8px 8px 24px 24px;
+  height: 708px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  scroll-margin: 20px
+}
+.status {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px
+}
+.appname {
+  margin: 0 0 18px;
+  font-weight: 600
+}
+h2 {
+  font: 500 38px/1.05 'Fira Sans Condensed';
+  margin: 0 0 25px
+}
+h3 {
+  font: 500 25px 'Fira Sans Condensed';
+  margin: 20px 0 8px
+}
+p {
+  line-height: 1.5
+}
+button {
+  font: 500 16px 'Exo 2';
+  min-height: 48px;
+  padding: 13px 14px;
+  background: #a83247;
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer
+}
+button:focus-visible {
+  outline: 3px solid #202b3d;
+  outline-offset: 3px
+}
+article>button:last-of-type {
+  margin-top: auto
+}
+.car {
+  width: 100%;
+  height: 224px;
+  margin-top: 8px
+}
+.plate {
+  border: 2px solid #202b3d;
+  border-radius: 8px;
+  padding: 14px 8px;
+  font: 700 31px 'Fira Sans Condensed';
+  display: flex;
+  justify-content: space-between
+}
+.plate span {
+  border-left: 1px solid;
+  padding-left: 10px
+}
+.sub {
+  color: #586273;
+  font-size: 14px
+}
+.mileage {
+  border-block: 1px solid #d8dde4;
+  padding: 22px 0;
+  margin: 20px 0
+}
+.mileage strong {
+  display: block;
+  font: 500 40px 'Fira Sans Condensed'
+}
+.mileage small {
+  font-size: 18px
+}
+.empty {
+  background: #f2f4f7;
+  padding: 18px 16px;
+  border-left: 3px solid #9ca9ba
+}
+.empty p {
+  margin-bottom: 0
+}
+.worklist {
+  display: grid;
+  gap: 12px
+}
+.worklist button {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  background: white;
+  border: 1px solid #d1d7e0;
+  color: #202b3d;
+  text-align: left;
+  padding: 17px 12px
+}
+.worklist button[aria-pressed=true] {
+  border: 2px solid #a83247;
+  background: #fbf1f3
+}
+.worklist small {
+  grid-column: 1/-1;
+  font-size: 14px;
+  font-weight: 400
+}
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  text-align: center;
+  gap: 16px 0;
+  margin: 10px 0 24px
+}
+.calendar span {
+  font-size: 14px;
+  color: #586273
+}
+.calendar b {
+  padding: 9px 0
+}
+.chosen {
+  background: #a83247;
+  color: white;
+  border-radius: 5px
+}
+.slots {
+  display: flex;
+  gap: 8px
+}
+.slots button {
+  background: #f2f4f7;
+  color: #202b3d;
+  flex: 1;
+  padding: 12px 5px
+}
+.slots button[aria-pressed=true] {
+  background: #202b3d;
+  color: white
+}
+.address {
+  border-left: 3px solid #a83247;
+  padding-left: 16px;
+  margin-top: 35px
+}
+.ticket {
+  background: #fff8fa;
+  border-top-color: #202b3d
+}
+.bigtime {
+  font: 500 66px 'Fira Sans Condensed';
+  color: #a83247
+}
+hr {
+  border: 0;
+  border-top: 1px dashed #ae8190;
+  width: 100%;
+  margin: 15px 0
+}
+.outline {
+  background: transparent;
+  color: #a83247;
+  border: 1px solid
+}
+small {
+  font-size: 14px;
+  margin-top: 12px
+}
+#feedback {
+  font-size: 14px;
+  margin-bottom: 0
+}
+footer {
+  font-size: 14px;
+  padding: 24px 40px
+}
+@media(max-width:1000px) {
+  header {
+    padding: 25px 20px;
+    flex-wrap: wrap;
+    align-items: flex-start
+  }
+  h1 {
+    font-size: 30px
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding: 0 20px
+  }
+  article,.step {
+    max-width: 430px;
+    margin-left: auto;
+    margin-right: auto
+  }
+  article {
+    width: 100%
+  }
+  footer {
+    padding: 24px 20px
+  }
+}
+/* Талон держит время, работу и действие в одном экране. */
+.ticket .status {
+  margin-bottom: 20px
+}
+.ticket h2 {
+  font-size: 34px;
+  margin-bottom: 12px
+}
+.ticket .bigtime {
+  font-size: 56px
+}
+.ticket h3 {
+  margin: 12px 0 4px
+}
+.ticket p {
+  margin: 10px 0
+}
+.ticket .sub {
+  line-height: 1.35
+}
+.ticket hr {
+  margin: 10px 0
+}
+.ticket small {
+  margin-top: 10px
+}
+
+@media (min-width: 1001px) and (max-width: 1800px) {
+  main {
+    grid-template-columns: repeat(2, minmax(0, 430px));
+    justify-content: center;
+  }
+}
+
+/* Task 12: complete screens. */
+@media(min-width:1001px){header{height:130px;padding:20px 40px;gap:24px}header h1{font-size:30px}header p{font-size:14px}main.flow,body>main{display:grid;grid-template-columns:repeat(3,340px);justify-content:center;align-items:start;gap:48px 42px;padding:0 40px 40px}main>section{min-width:0}main article{width:340px;height:708px;margin:0 auto}main>section>p:first-child{height:24px;margin:0 0 12px}}
+@media(min-width:1001px){main>section:nth-child(4){grid-column:2}}@media(min-width:1001px){main article{border-radius:8px;border-top:7px solid #a83247}}
+
+@media(min-width:1001px){body{padding-bottom:160px}}
+
+/* Задание 15: самостоятельные визуальные материалы. */
+.visual-hero{margin:0 0 18px;position:relative;overflow:hidden;flex:0 0 225px;min-height:0;border-radius:4px;border-bottom:4px solid #a83247}
+.visual-hero img{display:block;width:100%;height:225px;object-fit:cover}
+.visual-story{margin:24px auto 0;max-width:340px;overflow:hidden;border-radius:4px;border-bottom:4px solid #a83247}
+.visual-story img{display:block;width:100%;height:190px;object-fit:cover}
+.visual-story figcaption{font-size:14px;line-height:1.4;padding:12px 0}
+.visual-reference{max-width:340px;margin:20px auto;overflow:hidden}.visual-reference>svg{width:100%;height:190px}.visual-reference>div{margin:0}
+.visual-disclosure{font-size:14px;line-height:1.5}
+.visual-story.is-visible img{animation:service-open 1s ease both}@keyframes service-open{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0)}}
+@media(max-width:1000px){.visual-story,.visual-reference{max-width:430px}.visual-hero{flex-basis:225px}}
+@media(prefers-reduced-motion:reduce){.visual-hero img,.visual-story img,.visual-hero:after{animation:none!important;transition:none!important;transform:none!important;clip-path:none!important;opacity:1!important}}

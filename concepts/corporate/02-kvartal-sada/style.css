@@ -1,0 +1,483 @@
+* {
+  box-sizing: border-box
+}
+html {
+  scroll-behavior: smooth
+}
+body {
+  margin: 0;
+  background: #E8F3FA;
+  color: #214858;
+  font: 18px/1.55 Inter,sans-serif
+}
+a {
+  color: inherit;
+  text-decoration: none
+}
+button,input,textarea {
+  font: inherit;
+  color: inherit
+}
+a,button,input,textarea,summary {
+  outline-offset: 5px
+}
+header {
+  padding: 28px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px
+}
+.brand {
+  font: 24px/1.15 Jost,sans-serif
+}
+nav {
+  display: flex;
+  gap: 35px;
+  font-size: 16px
+}
+.outline {
+  display: inline-block;
+  border: 1px solid #214858;
+  border-radius: 50px;
+  padding: 13px 23px;
+  font-size: 16px
+}
+.outline:hover {
+  background: #214858;
+  color: #fff
+}
+.hero {
+  text-align: center;
+  padding-top: 25px;
+  position: relative
+}
+.hero h1 {
+  font: 72px/1.2 Jost,sans-serif;
+  letter-spacing: -2px;
+  margin: 0
+}
+.hero p {
+  margin: 22px auto 0
+}
+.hero svg {
+  display: block;
+  width: 100%;
+  margin-top: -20px;
+  max-height: 440px
+}
+.hero-link {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  padding: 13px 25px;
+  border-radius: 40px;
+  font-size: 16px;
+  white-space: nowrap
+}
+section:not(.hero) {
+  padding: 88px 7%
+}
+h2 {
+  font: 44px/1.3 Jost,sans-serif;
+  margin: 0 0 28px
+}
+h3 {
+  font-weight: 500;
+  font-size: 25px;
+  margin: 0 0 10px
+}
+.living {
+  background: #fff
+}
+.intro {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 70px;
+  margin-bottom: 30px
+}
+.intro p {
+  max-width: 410px;
+  margin-top: 8px
+}
+.courtyard {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 85px;
+  align-items: center
+}
+.garden {
+  height: 395px;
+  background: #E3EDE5;
+  position: relative;
+  overflow: hidden;
+  border-radius: 150px 150px 12px 12px
+}
+.garden span {
+  position: absolute;
+  top: 24px;
+  left: 40px;
+  z-index: 2;
+  font-family: Jost;
+  font-size: 28px
+}
+.garden i {
+  position: absolute;
+  width: 90px;
+  height: 110px;
+  background: #86A892;
+  border-radius: 50%;
+  left: 50px;
+  top: 100px;
+  box-shadow: inset -20px -8px 0 #749880
+}
+.garden i:nth-of-type(2) {
+  left: 170px;
+  top: 155px
+}
+.garden i:nth-of-type(3) {
+  left: auto;
+  right: 30px;
+  top: 85px
+}
+.garden i:nth-of-type(4) {
+  left: 85px;
+  top: 245px
+}
+.garden i:nth-of-type(5) {
+  left: auto;
+  right: 50px;
+  top: 260px
+}
+.path {
+  position: absolute;
+  left: 40%;
+  top: 30px;
+  width: 50px;
+  height: 500px;
+  background: #FAFCFA;
+  transform: rotate(-24deg)
+}
+.garden b {
+  position: absolute;
+  bottom: 42px;
+  right: 25px;
+  background: #fff;
+  padding: 12px 18px;
+  font-weight: 400
+}
+.garden small {
+  position: absolute;
+  bottom: 10px;
+  left: 25px;
+  font-size: 14px
+}
+.living-list article {
+  margin-bottom: 24px
+}
+.living-list p {
+  margin: 0;
+  max-width: 400px
+}
+.plans {
+  text-align: center
+}
+.plan-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap
+}
+.plan-tabs button {
+  border: 1px solid #9FB6C1;
+  border-radius: 40px;
+  background: transparent;
+  padding: 12px 22px;
+  cursor: pointer
+}
+.plan-tabs button[aria-pressed=true] {
+  background: #214858;
+  color: #fff
+}
+.plan-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  text-align: left;
+  align-items: center;
+  max-width: 1050px;
+  margin: 35px auto 0
+}
+.plan-body svg {
+  width: 100%
+}
+.caption {
+  font-size: 14px
+}
+.plan-body .caption {
+  max-width: 360px;
+  margin-top: 25px
+}
+.approach {
+  background: #D3DFE3;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 65px
+}
+.approach ol {
+  list-style: none;
+  counter-reset: steps;
+  margin: 0;
+  padding: 0
+}
+.approach li {
+  counter-increment: steps;
+  position: relative;
+  padding: 0 0 28px 55px
+}
+.approach li:before {
+  content: counter(steps);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font: 32px Jost;
+  color: #4C745C
+}
+.approach b {
+  font-size: 25px;
+  font-weight: 500
+}
+.approach p {
+  margin: 8px 0
+}
+.architecture {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  background: #fff
+}
+.material {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 12px
+}
+.material span {
+  height: 150px;
+  padding: 20px 10px;
+  display: flex;
+  align-items: end;
+  background: repeating-linear-gradient(0deg,#C5D1D5 0 17px,#E9EEEF 17px 20px);
+  font-size: 15px
+}
+.material span:nth-child(2) {
+  background: linear-gradient(90deg,#4E6E7B 48%,#9CB3BD 49%,#9CB3BD 52%,#4E6E7B 53%);
+  color: white
+}
+.material span:nth-child(3) {
+  background: #ACC6B6
+}
+.material p {
+  grid-column: 1/-1;
+  font: 28px/1.4 Jost;
+  margin-bottom: 0
+}
+.documents {
+  max-width: 1100px;
+  margin: auto
+}
+details {
+  padding: 22px 0;
+  border-bottom: 1px solid #9FB6C1
+}
+summary {
+  font-size: 22px;
+  cursor: pointer
+}
+details p {
+  max-width: 700px
+}
+.contact {
+  background: #214858;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px
+}
+.contact a {
+  overflow-wrap: anywhere
+}
+.contact p {
+  margin-top: 0
+}
+form {
+  display: grid;
+  gap: 20px
+}
+.fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px
+}
+label {
+  display: grid;
+  gap: 7px
+}
+input,textarea {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #A8BEC9;
+  background: #FFFFFF0D;
+  padding: 12px;
+  border-radius: 0
+}
+.consent {
+  display: flex;
+  font-size: 14px;
+  gap: 10px;
+  align-items: start
+}
+.consent input {
+  width: 20px;
+  height: 20px;
+  flex: none
+}
+form button {
+  border: 0;
+  background: #E8F3FA;
+  color: #214858;
+  border-radius: 40px;
+  padding: 16px;
+  cursor: pointer
+}
+[role=status] {
+  font-size: 15px
+}
+footer {
+  padding: 35px 5%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 15px
+}
+footer span {
+  font-family: Jost
+}
+@media(max-width:800px) {
+  header {
+    flex-wrap: wrap;
+    padding: 23px 6%;
+    gap: 20px
+  }
+  .brand {
+    font-size: 21px
+  }
+  nav {
+    width: 100%;
+    order: 3;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 14px
+  }
+  .outline {
+    font-size: 14px;
+    padding: 10px 16px
+  }
+  .hero {
+    padding-top: 20px
+  }
+  .hero h1 {
+    font-size: 43px;
+    letter-spacing: -1px
+  }
+  .hero p {
+    font-size: 16px;
+    padding: 0 20px
+  }
+  .hero p br {
+    display: none
+  }
+  .hero svg {
+    width: 170%;
+    max-width: none;
+    margin: 25px 0 0 -35%;
+    height: 285px
+  }
+  .hero {
+    overflow: hidden
+  }
+  .hero-link {
+    bottom: 15px;
+    font-size: 14px
+  }
+  section:not(.hero) {
+    padding: 60px 6%
+  }
+  h2 {
+    font-size: 33px
+  }
+  .intro,.courtyard,.plan-body,.approach,.architecture,.contact {
+    grid-template-columns: 1fr;
+    gap: 30px
+  }
+  .garden {
+    height: 340px
+  }
+  .garden span {
+    font-size: 24px;
+    left: 25px
+  }
+  .living-list h3 {
+    font-size: 23px
+  }
+  .plan-tabs {
+    gap: 8px
+  }
+  .plan-tabs button {
+    font-size: 15px;
+    padding: 10px 15px
+  }
+  .plan-body {
+    margin-top: 20px
+  }
+  .material {
+    gap: 8px
+  }
+  .material span {
+    font-size: 14px
+  }
+  .contact h2 {
+    margin-bottom: 0
+  }
+  .fields {
+    grid-template-columns: 1fr
+  }
+  .contact input,.contact textarea {
+    min-height: 48px
+  }
+  footer {
+    flex-direction: column
+  }
+  .approach ol {
+    padding-top: 5px
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior: auto
+  }
+}
+
+
+
+/* Task 12 */
+.hero h1{font-weight:500;line-height:1.08} .hero{background:#E8F3FA} .hero-link{font-weight:600}
+@media(max-width:850px){.hero h1{font-size:45px}}
+
+/* Этап 15: самостоятельная фотоподача */
+.hero{padding-top:20px;overflow:hidden}.hero .visual-hero{margin:30px 0 0;height:430px;overflow:hidden}.visual-hero img{display:block;width:100%;height:100%;object-fit:cover}.hero-link{position:relative;display:inline-block;margin:18px}.living .visual-process{margin:40px 0 0;grid-column:1/-1}.visual-process img{width:100%;height:350px;object-fit:cover}.architecture .visual-detail{margin:35px 0 0;grid-column:1/-1}.visual-detail img{width:100%;max-height:480px;object-fit:cover}.hero .visual-hero img{animation:garden-breath 18s ease-in-out infinite alternate}@keyframes garden-breath{to{transform:scale(1.055)}}@media(max-width:850px){.hero .visual-hero{height:340px}.visual-process img,.visual-detail img{height:260px}}
+.visual-process,.visual-detail{min-width:0}.visual-process img,.visual-detail img{display:block;max-width:100%}figcaption{font-size:14px;line-height:1.5;margin-top:10px}.visual-disclosure{font-size:14px;line-height:1.6;padding:20px 6%;margin:0}.technical-inset svg{width:100%;display:block}.technical-inset{min-width:0}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation:none!important;transition:none!important}.visual-hero img{transform:none!important}}
+
+/* Самокритика 15, проход 1 */
+.hero .visual-hero{height:400px}@media(max-width:850px){.hero .visual-hero{height:320px}}@media(max-width:360px){.hero .visual-hero{height:275px}}

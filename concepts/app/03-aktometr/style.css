@@ -1,0 +1,346 @@
+* {
+  box-sizing: border-box
+}
+body {
+  margin: 0;
+  background: #f3f5f2;
+  color: #253b34;
+  font: 16px 'Golos Text',sans-serif
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 40px;
+  gap: 28px
+}
+.logo {
+  font: 700 40px 'Roboto Condensed'
+}
+header p {
+  margin: 8px 0;
+  line-height: 1.5
+}
+h1 {
+  font: 500 36px/1.12 'Roboto Condensed';
+  margin: 0
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(5,minmax(0,1fr));
+  gap: 22px;
+  padding: 0 40px
+}
+.phase {
+  margin: 0 0 14px
+}
+article {
+  height: 708px;
+  background: white;
+  border: 1px solid #b6c8bf;
+  border-radius: 22px;
+  padding: 21px 24px;
+  display: flex;
+  flex-direction: column;
+  scroll-margin: 20px
+}
+.status {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 30px
+}
+h2 {
+  font: 700 36px/1.08 'Roboto Condensed';
+  margin: 0 0 24px
+}
+p {
+  line-height: 1.5
+}
+button {
+  font: 500 16px 'Golos Text';
+  min-height: 48px;
+  padding: 13px;
+  background: #386b58;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer
+}
+button:focus-visible,input:focus-visible {
+  outline: 3px solid #253b34;
+  outline-offset: 3px
+}
+article>button:last-of-type {
+  margin-top: auto
+}
+small {
+  font-size: 14px;
+  margin-top: 12px
+}
+.sheet {
+  position: relative;
+  margin: 12px 10px 15px 0;
+  background: #f3f5f2;
+  border: 1px solid #abbfb2;
+  padding: 20px 18px 30px;
+  clip-path: polygon(0 0,84% 0,100% 16%,100% 100%,0 100%)
+}
+.sheet:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border-left: 1px solid #abbfb2;
+  border-bottom: 1px solid #abbfb2;
+  background: #d6e5da
+}
+.sheet p {
+  font: 700 25px 'Roboto Condensed';
+  margin: 0 0 22px
+}
+.line {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #b6c8bf;
+  padding: 13px 0
+}
+.stamp {
+  display: block;
+  color: #386b58;
+  border: 1px solid;
+  width: max-content;
+  margin-top: 20px;
+  padding: 5px 9px;
+  font-size: 14px
+}
+.bar {
+  font-size: 16px;
+  margin: 0 0 24px
+}
+.bar span {
+  display: block;
+  color: #527762;
+  font-size: 14px;
+  margin-top: 7px
+}
+.object {
+  text-align: left;
+  background: #f3f5f2;
+  color: #253b34;
+  border: 1px solid #becfc4;
+  margin: 0 0 18px;
+  padding: 20px 16px
+}
+.object span {
+  font: 700 27px 'Roboto Condensed';
+  display: block
+}
+.object small {
+  display: block;
+  font-weight: 400;
+  line-height: 1.5
+}
+.object b {
+  font-size: 14px;
+  display: block;
+  margin-top: 22px
+}
+.object[aria-pressed=true] {
+  border-left: 5px solid #386b58
+}
+.note {
+  font-size: 14px;
+  color: #52665b
+}
+.tablehead,form label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px
+}
+.tablehead {
+  font-size: 14px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #253b34
+}
+form label {
+  padding: 22px 0;
+  border-bottom: 1px solid #b6c8bf
+}
+input[type=number] {
+  font: 20px 'Roboto Condensed';
+  color: #253b34;
+  width: 88px;
+  min-height: 46px;
+  border: 1px solid #9db6a8;
+  padding: 8px;
+  text-align: right;
+  background: #f3f5f2
+}
+form button {
+  width: 100%;
+  margin-top: 28px
+}
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px
+}
+.checklist li {
+  padding: 16px 0;
+  border-bottom: 1px solid #b6c8bf
+}
+.warning {
+  padding: 18px;
+  background: #f3f5f2;
+  border-left: 4px solid #386b58
+}
+.warning p {
+  margin-bottom: 0
+}
+.paper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 25px;
+  line-height: 1.5
+}
+.paper input {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0
+}
+#validation {
+  font-size: 14px;
+  color: #6a3d34
+}
+.document {
+  border-radius: 22px 22px 2px 2px;
+  border-bottom: 8px double #b6c8bf
+}
+.dochead {
+  border-block: 2px solid #253b34;
+  padding: 15px 0
+}
+.dochead p {
+  margin-bottom: 0
+}
+dl {
+  margin: 18px 0
+}
+dl div {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #b6c8bf;
+  padding: 13px 0
+}
+dd {
+  margin: 0;
+  font-weight: 700
+}
+.signature {
+  padding: 18px 0;
+  font: 24px 'Roboto Condensed';
+  border-bottom: 1px solid #b6c8bf
+}
+.signature span {
+  font: 14px 'Golos Text';
+  display: block;
+  margin-top: 8px
+}
+.secondary {
+  background: #d6e5da;
+  color: #253b34
+}
+.document .note {
+  margin-bottom: 0
+}
+footer {
+  padding: 24px 40px;
+  font-size: 14px
+}
+@media(max-width:1000px) {
+  header {
+    padding: 25px 20px;
+    flex-wrap: wrap;
+    align-items: flex-start
+  }
+  h1 {
+    font-size: 30px
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 28px
+  }
+  article,.phase {
+    max-width: 430px;
+    margin-left: auto;
+    margin-right: auto
+  }
+  article {
+    width: 100%
+  }
+  footer {
+    padding: 24px 20px
+  }
+}
+/* Компактный документ сохраняет поля и область подписи. */
+.document .status {
+  margin-bottom: 20px
+}
+.document h2 {
+  font-size: 32px;
+  margin-bottom: 16px
+}
+.document .dochead {
+  padding: 12px 0
+}
+.document .dochead p {
+  margin: 8px 0 0
+}
+.document dl {
+  margin: 12px 0
+}
+.document dl div {
+  padding: 10px 0
+}
+.document .signature {
+  padding: 12px 0;
+  font-size: 20px
+}
+.document #attachment {
+  margin: 10px 0
+}
+.document .note {
+  margin: 8px 0 0
+}
+
+@media (min-width: 1001px) and (max-width: 1800px) {
+  main {
+    grid-template-columns: repeat(2, minmax(0, 430px));
+    justify-content: center;
+  }
+}
+
+/* Task 12: complete screens. */
+@media(min-width:1001px){header{height:130px;padding:20px 40px;gap:24px}header h1{font-size:30px}header p{font-size:14px}main.flow,body>main{display:grid;grid-template-columns:repeat(3,340px);justify-content:center;align-items:start;gap:48px 42px;padding:0 40px 40px}main>section{min-width:0}main article{width:340px;height:708px;margin:0 auto}main>section>p:first-child{height:24px;margin:0 0 12px}}
+@media(min-width:1001px){main>section:nth-child(4){grid-column:2}}@media(min-width:1001px){main article{border-radius:0;box-shadow:8px 8px 0 #d6e5da}}
+
+@media(min-width:1001px){body{padding-bottom:160px}}
+
+/* Задание 15: самостоятельные визуальные материалы. */
+.visual-hero{margin:0 0 18px;position:relative;overflow:hidden;flex:0 0 225px;min-height:0;border-radius:0;border-left:4px solid #386b58}
+.visual-hero img{display:block;width:100%;height:225px;object-fit:cover}
+.visual-story{margin:24px auto 0;max-width:340px;overflow:hidden;border-radius:0;border-left:4px solid #386b58}
+.visual-story img{display:block;width:100%;height:190px;object-fit:cover}
+.visual-story figcaption{font-size:14px;line-height:1.4;padding:12px 0}
+.visual-reference{max-width:340px;margin:20px auto;overflow:hidden}.visual-reference>svg{width:100%;height:190px}.visual-reference>div{margin:0}
+.visual-disclosure{font-size:14px;line-height:1.5}
+.visual-story.is-visible img{animation:site-rise .9s ease both}@keyframes site-rise{from{transform:translateY(20px);opacity:.3}to{transform:none;opacity:1}}
+@media(max-width:1000px){.visual-story,.visual-reference{max-width:430px}.visual-hero{flex-basis:225px}}
+@media(prefers-reduced-motion:reduce){.visual-hero img,.visual-story img,.visual-hero:after{animation:none!important;transition:none!important;transform:none!important;clip-path:none!important;opacity:1!important}}

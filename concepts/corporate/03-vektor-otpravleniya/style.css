@@ -1,0 +1,586 @@
+* {
+  box-sizing: border-box
+}
+html {
+  scroll-behavior: smooth
+}
+body {
+  margin: 0;
+  background: #F1EFFA;
+  color: #322B67;
+  font: 18px/1.5 "Raleway",sans-serif
+}
+a {
+  color: inherit;
+  text-decoration: none
+}
+button,input,textarea {
+  font: inherit
+}
+a,button,input,textarea,summary {
+  outline-offset: 5px
+}
+header {
+  padding: 30px 5%;
+  display: flex;
+  justify-content: space-between;
+  gap: 35px;
+  align-items: center
+}
+.mark {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font: 700 24px/1.05 "Montserrat"
+}
+.mark svg {
+  width: 42px;
+  height: 42px
+}
+nav {
+  display: flex;
+  gap: 30px;
+  font-size: 16px
+}
+nav a:last-child {
+  border-bottom: 2px solid #6653AC
+}
+.hero {
+  min-height: 735px;
+  position: relative;
+  padding: 65px 7% 100px;
+  overflow: hidden
+}
+.hero-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 690px;
+  pointer-events: none
+}
+.hero-copy a {
+  pointer-events: auto
+}
+.lead {
+  font-size: 19px;
+  margin: 0 0 20px
+}
+.hero h1 {
+  font: 600 76px/1.05 "Montserrat";
+  letter-spacing: -3px;
+  margin: 0 0 30px
+}
+.hero-copy>p:not(.lead) {
+  font-size: 20px
+}
+.button {
+  display: inline-block;
+  background: #322B67;
+  color: #fff;
+  padding: 17px 25px;
+  border-radius: 8px;
+  margin-top: 20px
+}
+.route-art {
+  position: absolute;
+  right: 4%;
+  top: 20px;
+  width: 43%;
+  height: 650px
+}
+.route-line {
+  position: absolute;
+  inset: 60px 80px 80px 100px;
+  border: 38px solid #D4CBEA;
+  border-left-color: transparent;
+  border-radius: 160px
+}
+.node {
+  position: absolute;
+  background: #fff;
+  border-left: 6px solid #6653AC;
+  min-width: 200px;
+  padding: 14px 20px;
+  font-family: "Montserrat";
+  font-size: 23px;
+  box-shadow: 0 12px 30px #322B6710
+}
+.node span {
+  display: block;
+  font: 15px "Raleway";
+  margin-top: 4px
+}
+.origin {
+  top: 35px;
+  left: 40px
+}
+.terminal {
+  right: 0;
+  top: 280px
+}
+.destination {
+  bottom: 35px;
+  left: 10px
+}
+.truck {
+  position: absolute;
+  right: 90px;
+  top: 145px;
+  width: 142px;
+  height: 65px;
+  background: #6653AC;
+  border: 8px solid #F1EFFA;
+  border-radius: 5px
+}
+.truck:before {
+  content: "";
+  position: absolute;
+  right: -33px;
+  top: 13px;
+  width: 28px;
+  height: 44px;
+  background: #A397D0
+}
+.truck i {
+  position: absolute;
+  bottom: -16px;
+  left: 15px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #322B67
+}
+.truck i:last-child {
+  left: auto;
+  right: -22px
+}
+section:not(.hero) {
+  padding: 85px 7%
+}
+h2 {
+  font: 500 48px/1.15 "Montserrat";
+  letter-spacing: -1px;
+  margin: 0 0 25px
+}
+h3 {
+  font: 500 25px "Montserrat"
+}
+.routes {
+  background: #fff
+}
+.route-intro {
+  max-width: 620px;
+  margin-bottom: 45px
+}
+.lanes article {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  gap: 20px 35px;
+  border-top: 1px solid #D4CBEA;
+  padding: 24px 0
+}
+.lane-name {
+  font: 500 25px "Montserrat"
+}
+.lane-track {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 0
+}
+.lane-track:before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background: #D4CBEA;
+  left: 0;
+  right: 0;
+  top: 50%
+}
+.lane-track span,.lane-track b {
+  position: relative;
+  background: #fff;
+  padding: 8px;
+  font-size: 16px
+}
+.lane-track b {
+  background: #F1EFFA;
+  border-radius: 8px;
+  font-weight: 400
+}
+.lanes article>p {
+  grid-column: 2;
+  margin: 0;
+  font-size: 16px;
+  color: #615A7E
+}
+.cargo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px
+}
+.cargo-options {
+  display: grid;
+  gap: 12px
+}
+.cargo-options button {
+  padding: 20px 25px;
+  border: 1px solid #BBB0DA;
+  border-radius: 8px;
+  text-align: left;
+  background: transparent;
+  color: inherit;
+  cursor: pointer
+}
+.cargo-options button[aria-pressed=true] {
+  background: #322B67;
+  color: white
+}
+.cargo-options span {
+  font-size: 24px;
+  display: block
+}
+.cargo-options small {
+  font-size: 15px
+}
+output {
+  font-size: 15px;
+  margin-top: 10px
+}
+.work {
+  background: #D4CBEA
+}
+.work ol {
+  display: flex;
+  padding-left: 25px;
+  gap: 40px
+}
+.work li {
+  flex: 1;
+  padding-left: 7px
+}
+.work h3 {
+  margin: 10px 0
+}
+.work p {
+  font-size: 17px
+}
+.responsibility {
+  background: #fff
+}
+.manifest {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 70px
+}
+.manifest p {
+  display: grid;
+  gap: 10px;
+  border-left: 4px solid #D4CBEA;
+  padding: 15px 25px
+}
+.manifest b {
+  font: 500 25px "Montserrat"
+}
+.documents {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px
+}
+.note {
+  font-size: 14px
+}
+details {
+  padding: 18px 0;
+  border-top: 1px solid #BBB0DA
+}
+summary {
+  font-size: 22px;
+  cursor: pointer
+}
+details p {
+  font-size: 17px
+}
+.contact {
+  background: #322B67;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px
+}
+.dispatch p {
+  max-width: 460px
+}
+.dispatch a {
+  overflow-wrap: anywhere
+}
+form {
+  display: grid;
+  gap: 17px
+}
+label {
+  display: grid;
+  gap: 5px
+}
+input,textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #AAA0CB;
+  background: #FFFFFF0D;
+  color: white
+}
+.consent {
+  display: flex;
+  gap: 10px;
+  font-size: 14px
+}
+.consent input {
+  width: 20px;
+  height: 20px;
+  flex: none
+}
+form button {
+  padding: 17px;
+  background: #F1EFFA;
+  color: #322B67;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer
+}
+[role=status] {
+  font-size: 15px;
+  margin: 0
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 35px 5%;
+  font-size: 15px
+}
+.footer-name {
+  font: 700 21px "Montserrat"
+}
+@media(max-width:850px) {
+  header {
+    display: block;
+    padding: 24px 6%
+  }
+  .mark {
+    font-size: 22px
+  }
+  nav {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 18px;
+    font-size: 14px
+  }
+  .hero {
+    padding: 32px 6% 25px;
+    min-height: 800px
+  }
+  .hero h1 {
+    font-size: 45px;
+    letter-spacing: -1.5px
+  }
+  .hero-copy>p:not(.lead) {
+    font-size: 17px
+  }
+  .hero-copy>p br {
+    display: none
+  }
+  .lead {
+    font-size: 16px
+  }
+  .button {
+    margin-top: 7px;
+    font-size: 16px
+  }
+  .route-art {
+    top: auto;
+    bottom: 5px;
+    left: 8%;
+    right: auto;
+    width: 84%;
+    height: 320px
+  }
+  .route-line {
+    inset: 30px 40px 35px 60px;
+    border-width: 22px;
+    border-radius: 90px
+  }
+  .node {
+    padding: 9px 12px;
+    min-width: 150px;
+    font-size: 18px
+  }
+  .node span {
+    font-size: 14px
+  }
+  .origin {
+    left: 0;
+    top: 10px
+  }
+  .terminal {
+    right: 0;
+    top: 130px
+  }
+  .destination {
+    left: 0;
+    bottom: 0
+  }
+  .truck {
+    right: 45px;
+    top: 60px;
+    transform: scale(.7)
+  }
+  section:not(.hero) {
+    padding: 60px 6%
+  }
+  h2 {
+    font-size: 35px
+  }
+  .lanes article {
+    grid-template-columns: 1fr;
+    gap: 8px
+  }
+  .lanes article>p {
+    grid-column: 1
+  }
+  .lane-track {
+    gap: 3px
+  }
+  .lane-track span,.lane-track b {
+    font-size: 14px;
+    padding: 5px;
+    max-width: 33%
+  }
+  .cargo,.documents,.contact {
+    grid-template-columns: 1fr;
+    gap: 30px
+  }
+  .work ol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px
+  }
+  .manifest {
+    grid-template-columns: 1fr
+  }
+  .manifest p {
+    padding-left: 20px
+  }
+  .dispatch a {
+    font-size: 16px
+  }
+  footer {
+    flex-direction: column
+  }
+}
+@media(max-width:360px) {
+  .hero h1 {
+    font-size: 38px
+  }
+  .hero {
+    min-height: 820px
+  }
+  .work ol {
+    grid-template-columns: 1fr
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior: auto
+  }
+}
+section.routes {
+  padding-bottom: 95px
+}
+.lane-name {
+  font-size: 29px
+}
+.lane-track {
+  min-height: 92px
+}
+.lane-track:before {
+  height: 5px;
+  background: #B9ADDB
+}
+.lane-track span {
+  border: 1px solid #D4CBEA;
+  border-radius: 6px;
+  padding: 13px 15px
+}
+.lane-track b {
+  padding: 14px 19px;
+  background: #D4CBEA;
+  color: #322B67
+}
+.lanes article>p {
+  padding-left: 15px
+}
+.truck {
+  border-width: 5px
+}
+.node {
+  box-shadow: none
+}
+@media(max-width:850px) {
+  section.routes {
+    padding-bottom: 60px
+  }
+  .lane-name {
+    font-size: 27px
+  }
+  .lane-track span,.lane-track b {
+    padding: 10px 7px;
+    overflow-wrap: anywhere
+  }
+  .lanes article>p {
+    padding-left: 0
+  }
+}
+.lane-name {
+  font-size: 26px
+}
+.lane-track span:before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #6653AC;
+  margin-right: 8px;
+  vertical-align: middle
+}
+.lane-track b {
+  font-weight: 500
+}
+.route-intro {
+  font-size: 20px;
+  max-width: 710px
+}
+@media(max-width:850px) {
+  .route-intro {
+    font-size: 18px
+  }
+  .lane-track span:before {
+    display: none
+  }
+}
+
+
+
+/* Task 12 */
+section.routes{padding-top:55px;padding-bottom:55px}.route-intro{margin-bottom:25px}.lanes article{padding:18px 0;gap:12px 35px}.lane-track{min-height:76px}.hero{display:grid;grid-template-columns:1.15fr 1fr;gap:32px;align-items:center;background:#FFF144;color:#171B28;overflow:visible}.hero-copy{max-width:100%}.hero h1{font-size:65px;letter-spacing:-2px}.route-art{position:relative;inset:auto;width:100%;height:520px}.node{box-shadow:none;border:2px solid #171B28;border-left-width:8px;color:#171B28;border-radius:0}.route-line{border-color:#171B28;border-left-color:transparent;border-width:22px}.button{border-radius:0;background:#171B28}.origin{left:0}.destination{left:0}.truck{border-color:#FFF144}header{border-bottom:2px solid #171B28}.lane{border-radius:0}
+@media(max-width:850px){.documents>*{min-width:0}.documents h2{overflow-wrap:anywhere}.work ol{grid-template-columns:1fr}.work li{min-width:0;overflow-wrap:anywhere}header{padding:16px 6%}nav{margin-top:16px}.hero{min-height:0;display:flex;flex-direction:column;padding:25px 6% 30px;gap:22px}.hero h1{font-size:35px;letter-spacing:-1px;margin-bottom:14px}.hero-copy>p:not(.lead){font-size:16px;margin:10px 0}.lead{font-size:14px;margin-bottom:12px}.hero-copy br{display:none}.hero .button{margin-top:7px;padding:12px 16px}.route-art{height:285px;min-height:285px;width:100%;inset:auto}.node{font-size:18px;padding:7px 12px;min-width:185px}.node span{font-size:14px}.origin{top:0;left:0}.terminal{top:103px;right:0}.destination{bottom:0;left:0}.route-line{inset:20px 55px 20px 45px;border-radius:80px;border-width:15px}.truck{display:none}}
+
+/* Этап 15: самостоятельная фотоподача */
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:0;padding:0;min-height:740px}.hero-copy{padding:60px 6vw;align-self:center}.hero h1{font-size:clamp(40px,4.1vw,62px)}.visual-hero{margin:0;height:100%;min-height:740px;overflow:hidden}.visual-hero img{height:100%;width:100%;object-fit:cover;object-position:54%}.routes .visual-process{margin:40px 0 0}.visual-process img{width:100%;height:310px;object-fit:cover}.responsibility .visual-detail{grid-column:1/-1;margin:32px 0 0}.visual-detail img{width:100%;height:360px;object-fit:cover}.technical-inset .route-art{position:relative;width:100%;height:400px;inset:auto;margin:25px 0}.technical-inset{grid-column:1/-1}.visual-hero img{transition:object-position 1.8s}.visual-hero:hover img{object-position:70%}@media(max-width:850px){.hero{display:flex;flex-direction:column;min-height:0}.hero-copy{padding:35px 6%}.hero h1{font-size:39px}.visual-hero{height:320px;min-height:0;width:100%}.visual-process img,.visual-detail img{height:250px}}
+.visual-process,.visual-detail{min-width:0}.visual-process img,.visual-detail img{display:block;max-width:100%}figcaption{font-size:14px;line-height:1.5;margin-top:10px}.visual-disclosure{font-size:14px;line-height:1.6;padding:20px 6%;margin:0}.technical-inset svg{width:100%;display:block}.technical-inset{min-width:0}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation:none!important;transition:none!important}.visual-hero img{transform:none!important}}
+
+/* Самокритика 15, проход 1 */
+@media(max-width:850px){.visual-hero{height:270px}.hero-copy{padding:26px 6%}.hero h1{font-size:36px}}@media(max-width:360px){.hero h1{font-size:31px}.visual-hero{height:245px}}

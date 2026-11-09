@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Приёмная линия — запись в клинику</title>
+    <link rel="stylesheet" href="../../../fonts-lib/fonts.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <div class="logo">Приёмная линия<span>Личная запись в клинику</span>
+      </div>
+      <h1>Выберите время.<br>Мы сохраним его для вас.</h1>
+      <p>MVP приложения<br>от 385 000 ₽</p>
+    </header>
+    <main>
+      <section>
+        <p class="phase">1. Вход</p>
+        <article id="entry">
+          <div class="status">9:41 <span>● ▰</span>
+          </div>
+          <p>Приёмная линия</p>
+          <h2>Начните<br>с удобной даты</h2>
+          <figure class="visual-hero" data-motion="fade"><img src="assets/hero.jpg" width="1536" height="1024" alt="Светлая приёмная клиники" fetchpriority="high"></figure>
+          <p>Специалист, время и памятка<br>к визиту — в одном месте.</p>
+          <button data-go="specialist">Войти в демопрофиль</button>
+        </article>
+      </section>
+      <section>
+        <p class="phase">2. Специалист</p>
+        <article id="specialist">
+          <div class="status">9:41 <span>● ▰</span>
+          </div>
+          <h2>К кому<br>записаться?</h2>
+          <p class="hint">Выбор специальности для демонстрации интерфейса.</p>
+          <div class="specialties">
+            <button aria-pressed="true" data-name="Терапевт">
+              <span>Терапевт</span>
+              <small>Первичный приём</small>
+            </button>
+            <button aria-pressed="false" data-name="Кардиолог">
+              <span>Кардиолог</span>
+              <small>Консультация специалиста</small>
+            </button>
+            <button aria-pressed="false" data-name="Невролог">
+              <span>Невролог</span>
+              <small>Консультация специалиста</small>
+            </button>
+          </div>
+          <div class="no-visits">
+            <b>Предыдущих визитов нет</b>
+            <p>После записи здесь появится история посещений.</p>
+          </div>
+          <button data-go="time">Выбрать время</button>
+        </article>
+        <figure class="visual-story" data-motion="fade"><img src="assets/process.jpg" width="1536" height="1024" loading="lazy" alt="Кабинет для консультации"><figcaption>Кабинет для консультации</figcaption></figure>
+        <div class="visual-reference"><div class="calendar-leaf">
+            <span>Ноябрь</span>
+            <strong>07</strong>
+            <p>Суббота</p>
+          </div></div>
+      </section>
+      <section>
+        <p class="phase">3. Дата и время</p>
+        <article id="time">
+          <div class="status">9:41 <span>● ▰</span>
+          </div>
+          <p id="selected-specialty">Терапевт · первичный приём</p>
+          <h2>Ближайший<br>приём</h2>
+          <div class="date-row">
+            <strong>7</strong>
+            <div>ноября, суббота<br>
+              <span>Кабинет 204</span>
+            </div>
+          </div>
+          <p>Свободное время</p>
+          <div class="slots">
+            <button aria-pressed="true">09:30</button>
+            <button aria-pressed="false">11:00</button>
+            <button aria-pressed="false">14:30</button>
+            <button aria-pressed="false">16:00</button>
+          </div>
+          <p class="location">Клиника на Лесной<br>
+            <b>Лесная, 16 · второй этаж</b>
+          </p>
+          <button data-go="patient">Продолжить запись</button>
+        </article>
+      </section>
+      <section>
+        <p class="phase">4. Пациент</p>
+        <article id="patient">
+          <div class="status">9:41 <span>● ▰</span>
+          </div>
+          <h2>На кого<br>оформить?</h2>
+          <form id="patient-form">
+            <label>Имя и фамилия<input id="name" required minlength="3" placeholder="Введите имя и фамилию" autocomplete="off">
+            </label>
+            <label>Телефон<input id="phone" required type="tel" pattern="\+?[0-9 ()-]{10,18}" placeholder="+7 900 000-00-00" autocomplete="off">
+            </label>
+            <label class="consent">
+              <input required type="checkbox" id="consent"> Данные демонстрационные, запись в клинику не отправляется</label>
+            <p class="hint">Для демо используйте вымышленные данные. Они хранятся только до перезагрузки страницы.</p>
+            <button>Подтвердить демозапись</button>
+          </form>
+        </article>
+      </section>
+      <section>
+        <p class="phase">5. Памятка к визиту</p>
+        <article class="result" id="result">
+          <div class="status">9:41 <span>● ▰</span>
+          </div>
+          <p>Ваш талон</p>
+          <h2 id="result-title">Пример<br>записи</h2>
+          <div class="appointment">
+            <strong id="result-time">09:30</strong>
+            <span>7 ноября · суббота</span>
+          </div>
+          <h3 id="result-specialty">Терапевт</h3>
+          <p id="patient-name">Имя появится после записи</p>
+          <div class="memo">
+            <b>Перед визитом</b>
+            <ul>
+              <li>Возьмите документ, удостоверяющий личность.</li>
+              <li>Придите за 15 минут для оформления.</li>
+            </ul>
+          </div>
+          <button data-go="time" class="secondary">Изменить время</button>
+          <small>Пример — концепт для портфолио</small>
+          <p class="hint" id="feedback" aria-live="polite">Демонстрационный талон.</p>
+        </article>
+        <figure class="visual-story" data-motion="fade"><img src="assets/detail.jpg" width="1536" height="1024" loading="lazy" alt="Стетоскоп на чистой поверхности"><figcaption>Стетоскоп на чистой поверхности</figcaption></figure>
+      </section>
+    </main>
+    <footer>Приёмная линия · выбор специалиста и запись на приём<p class="visual-disclosure">Изображения — ИИ-визуализации для концепта.</p></footer>
+    <script src="script.js">
+    </script>
+  </body>
+</html>
+

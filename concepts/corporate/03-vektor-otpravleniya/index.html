@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Вектор отправления — логистика</title>
+    <link rel="stylesheet" href="../../../fonts-lib/fonts.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <a class="mark" href="#home">
+        <svg viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M4 8h20v24h12M4 20h32" fill="none" stroke="currentColor" stroke-width="5"/>
+        </svg>Вектор<br> отправления</a>
+      <nav aria-label="Навигация">
+        <a href="#routes">Схемы перевозки</a>
+        <a href="#cargo">Грузы</a>
+        <a href="#documents">Документы</a>
+        <a href="#contact">Запросить маршрут</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-copy">
+          <p class="lead">Логистика для бизнеса</p>
+          <h1>У груза есть<br> точка назначения.<br> У вас — план.</h1>
+          <p>Соединяем автомобильную доставку,<br> терминалы и склад в один маршрут.</p>
+          <a class="button" href="#contact">Спланировать перевозку</a>
+        </div>
+        <figure class="visual-hero"><img src="assets/hero.jpg" alt="Грузовой автомобиль у терминала" width="1600" height="900" fetchpriority="high" decoding="async"></figure>
+      </section>
+      <section class="routes" id="routes" data-shot>
+        <h2>Маршрут состоит<br> из согласованных передач</h2>
+        <p class="route-intro">Выбираем схему под партию, адрес и условия приёмки. На каждом участке понятно, кто отвечает за груз.</p>
+        <div class="lanes">
+          <article>
+            <div class="lane-name">Прямая машина</div>
+            <div class="lane-track">
+              <span>Склад отправителя</span>
+              <b>Без перегрузки</b>
+              <span>Склад получателя</span>
+            </div>
+            <p>Когда груз занимает машину или требует отдельного транспорта.</p>
+          </article>
+          <article>
+            <div class="lane-name">Сборная отправка</div>
+            <div class="lane-track">
+              <span>Забор груза</span>
+              <b>Терминал</b>
+              <span>Доставка адресату</span>
+            </div>
+            <p>Когда небольшую партию удобно объединить с другими отправками.</p>
+          </article>
+          <article>
+            <div class="lane-name">Через хранение</div>
+            <div class="lane-track">
+              <span>Поступление</span>
+              <b>Склад и комплектация</b>
+              <span>Подача по заявке</span>
+            </div>
+            <p>Когда отгрузка и приёмка происходят в разные дни.</p>
+          </article>
+        </div>
+      <figure class="visual-process"><img src="assets/process.jpg" alt="Поддоны на погрузочной площадке" width="1600" height="900" loading="lazy" decoding="async"><figcaption>Поддоны на погрузочной площадке</figcaption></figure>
+</section>
+      <section id="cargo" class="cargo">
+        <div>
+          <h2>Сначала свойства груза.<br> Затем транспорт.</h2>
+          <p>Выберите задачу, чтобы включить её в обращение.</p>
+        </div>
+        <div class="cargo-options">
+          <button type="button" data-cargo="Паллетированный груз" aria-pressed="true">
+            <span>Паллетированный груз</span>
+            <small>Габариты, масса, штабелирование</small>
+          </button>
+          <button type="button" data-cargo="Оборудование" aria-pressed="false">
+            <span>Оборудование</span>
+            <small>Крепление, центр тяжести, погрузка</small>
+          </button>
+          <button type="button" data-cargo="Комплектующие" aria-pressed="false">
+            <span>Комплектующие</span>
+            <small>Упаковка, места, комплектность</small>
+          </button>
+          <output id="cargo-choice" aria-live="polite">Паллетированный груз</output>
+        </div>
+      </section>
+      <section class="work" id="work">
+        <h2>Одна цепочка согласования</h2>
+        <ol>
+          <li>
+            <h3>Описываем отправку</h3>
+            <p>Уточняем груз, адреса и возможности погрузки.</p>
+          </li>
+          <li>
+            <h3>Собираем план</h3>
+            <p>Согласуем транспорт, передачи и условия доставки.</p>
+          </li>
+          <li>
+            <h3>Ведём перевозку</h3>
+            <p>Передаём статус при смене участка маршрута.</p>
+          </li>
+          <li>
+            <h3>Закрываем рейс</h3>
+            <p>Проверяем приёмку и возвращаем документы.</p>
+          </li>
+        </ol>
+      <div class="technical-inset"><div class="route-art" role="img" aria-label="Схематичный путь груза от отправителя через терминал к получателю">
+          <div class="route-line">
+          </div>
+          <div class="node origin">Отправитель<span>Груз готов</span>
+          </div>
+          <div class="node terminal">Терминал<span>Передача под контроль</span>
+          </div>
+          <div class="node destination">Получатель<span>Документы возвращены</span>
+          </div>
+          <div class="truck">
+            <i>
+            </i>
+            <i>
+            </i>
+          </div>
+        </div></div>
+</section>
+      <section class="responsibility">
+        <h2>Что должно быть известно<br> до подачи машины</h2>
+        <div class="manifest">
+          <p>
+            <b>Отправитель</b>
+            <span>Контакт на складе, окно погрузки, пропускной режим</span>
+          </p>
+          <p>
+            <b>Груз</b>
+            <span>Количество мест, размеры, масса, особенности упаковки</span>
+          </p>
+          <p>
+            <b>Получатель</b>
+            <span>Адрес, разгрузочная техника, порядок приёмки</span>
+          </p>
+          <p>
+            <b>Возврат документов</b>
+            <span>Комплект оригиналов и согласованный способ передачи</span>
+          </p>
+        </div>
+      <figure class="visual-detail"><img src="assets/detail.jpg" alt="Организация движения в терминале" width="1600" height="900" loading="lazy" decoding="async"><figcaption>Организация движения в терминале</figcaption></figure>
+</section>
+      <section class="documents" id="documents">
+        <div>
+          <h2>Документальный след<br> каждой отправки</h2>
+          <p class="note">Пример — концепт для портфолио</p>
+        </div>
+        <div>
+          <details>
+            <summary>Условный договор перевозки</summary>
+            <p>Пример структуры документа с условиями приёма, перевозки и ответственности. Юридически действующий договор в концепте отсутствует.</p>
+          </details>
+          <details>
+            <summary>Условный комплект сопроводительных документов</summary>
+            <p>Транспортная накладная, заявка, доверенность и акт приёмки. Допуски для специальных грузов проверяются отдельно, в концепте они не заявлены.</p>
+          </details>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <div class="dispatch">
+          <h2>Куда движется<br> ваш груз?</h2>
+          <p>Условная диспетчерская<br>
+            <a href="mailto:route@vektor-otpravleniya.example">route@vektor-otpravleniya.example</a>
+          </p>
+          <p>Для предварительного плана достаточно описать отправку. Даты и стоимость обсуждаются после проверки условий.</p>
+        </div>
+        <form>
+          <label>Как к вам обращаться<input name="name" required minlength="2" autocomplete="name">
+          </label>
+          <label>Почта для плана перевозки<input type="email" name="email" required autocomplete="email">
+          </label>
+          <label>Груз и маршрут<textarea name="message" required rows="4">Паллетированный груз. Откуда и куда требуется доставка?</textarea>
+          </label>
+          <label class="consent">
+            <input type="checkbox" name="consent" required>Согласен на демонстрационную проверку формы</label>
+          <button type="submit">Проверить описание перевозки</button>
+          <p role="status">
+          </p>
+        </form>
+      </section>
+    <p class="visual-disclosure">Пример — концепт для портфолио. Изображения созданы ИИ и показывают вымышленные объекты.</p>
+</main>
+    <footer>
+      <span class="footer-name">Вектор отправления</span>
+      <span>От передачи груза до передачи документов</span>
+      <a href="#home">В начало маршрута</a>
+    </footer>
+    <script src="script.js">
+    </script>
+  </body>
+</html>

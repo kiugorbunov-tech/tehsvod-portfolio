@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Отметка местности — инженерная геодезия</title>
+    <link rel="stylesheet" href="../../../fonts-lib/fonts.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#home">
+        <span class="target">⊕</span>Отметка местности</a>
+      <nav aria-label="Виды разделов">
+        <a href="#survey">Виды съёмки</a>
+        <a href="#work">Полевой порядок</a>
+        <a href="#documents">Документы</a>
+      </nav>
+      <a href="#contact" class="head-contact">Передать границы участка</a>
+    </header>
+    <main>
+      <section id="home" class="hero">
+        
+        <figure class="visual-hero"><img src="assets/hero.jpg" alt="Геодезический прибор на штативе" width="1600" height="900" fetchpriority="high" decoding="async"></figure>
+        <div class="hero-copy">
+          <h1>Опора<br> для точных<br> решений.</h1>
+          <p>Инженерная геодезия<br> для проектирования,<br> строительства и контроля.</p>
+          <a class="button" href="#survey">Выбрать задачу</a>
+        </div>
+      </section>
+      <section class="survey" id="survey" data-shot>
+        <h2>Местность становится<br> исходными данными</h2>
+        <div class="survey-ledger">
+          <div class="ledger-head">
+            <span>Задача</span>
+            <span>В поле</span>
+            <span>На выходе</span>
+          </div>
+          <button type="button" data-survey="Топографическая съёмка" aria-pressed="true">
+            <b>Для проекта</b>
+            <span>Съёмка рельефа, ситуации и доступных коммуникаций</span>
+            <strong>Топографический план</strong>
+          </button>
+          <button type="button" data-survey="Разбивочные работы" aria-pressed="false">
+            <b>Для стройки</b>
+            <span>Вынос проектных осей и отметок на площадку</span>
+            <strong>Разбивочная основа</strong>
+          </button>
+          <button type="button" data-survey="Исполнительная съёмка" aria-pressed="false">
+            <b>Для контроля</b>
+            <span>Измерение фактического положения конструкций</span>
+            <strong>Исполнительная схема</strong>
+          </button>
+        </div>
+        <div class="survey-result">
+          <span>Выбрана задача</span>
+          <output id="survey-choice" aria-live="polite">Топографическая съёмка</output>
+          <a href="#contact">Подготовить исходные данные</a>
+        </div>
+      <figure class="visual-process"><img src="assets/process.jpg" alt="Оптика и регулировочный узел прибора" width="1600" height="900" loading="lazy" decoding="async"><figcaption>Оптика и регулировочный узел прибора</figcaption></figure>
+</section>
+      <section class="fieldpack" id="fieldpack">
+        <h2>В поле выходят<br> с подготовленным заданием</h2>
+        <div class="field-doc">
+          <div class="clip">
+          </div>
+          <h3>Папка исходных данных</h3>
+          <ul>
+            <li>
+              <b>Границы</b>
+              <span>Контур участка или зона работ</span>
+            </li>
+            <li>
+              <b>Назначение</b>
+              <span>Проектирование, монтаж или контроль</span>
+            </li>
+            <li>
+              <b>Система</b>
+              <span>Требования к координатам и высотам</span>
+            </li>
+            <li>
+              <b>Доступ</b>
+              <span>Контакт на площадке и режим посещения</span>
+            </li>
+          </ul>
+        </div>
+      <figure class="visual-detail"><img src="assets/detail.jpg" alt="Полевые измерения на строительной площадке" width="1600" height="900" loading="lazy" decoding="async"><figcaption>Полевые измерения на строительной площадке</figcaption></figure>
+</section>
+      <section class="work" id="work">
+        <h2>Поле и камеральная работа<br> сходятся в одном результате</h2>
+        <div class="field-desk">
+          <article>
+            <span>Полевой этап</span>
+            <h3>Измерить</h3>
+            <ol>
+              <li>Рекогносцировка участка</li>
+              <li>Проверка исходной основы</li>
+              <li>Съёмка и полевой контроль</li>
+            </ol>
+          </article>
+          <div class="transfer">Наблюдения<br> и исходная основа</div>
+          <article>
+            <span>Камеральный этап</span>
+            <h3>Проверить и оформить</h3>
+            <ol start="4">
+              <li>Обработка измерений</li>
+              <li>Сопоставление с заданием</li>
+              <li>Подготовка выдачи</li>
+            </ol>
+          </article>
+        </div>
+      </section>
+      <section class="result">
+        <h2>Результат пригоден,<br> когда понятны его границы</h2>
+        <div class="result-cells">
+          <article>
+            <h3>Система координат</h3>
+            <p>В какой основе выполнена работа и как её использовать дальше.</p>
+          </article>
+          <article>
+            <h3>Состав съёмки</h3>
+            <p>Что измерено, что предоставлено заказчиком и какие сведения требуют уточнения.</p>
+          </article>
+          <article>
+            <h3>Формат выдачи</h3>
+            <p>Чертежи, цифровые данные и пояснения под следующий этап проекта.</p>
+          </article>
+        </div>
+      <div class="technical-inset"><div class="optics">
+          <svg viewBox="0 0 560 560" role="img" aria-label="Поле зрения геодезического прибора с визирной сеткой и силуэтом рельефа">
+            <defs>
+              <clipPath id="lens">
+                <circle cx="280" cy="280" r="240"/>
+              </clipPath>
+            </defs>
+            <circle cx="280" cy="280" r="257" fill="#303D45"/>
+            <circle cx="280" cy="280" r="240" fill="#E9E8D8"/>
+            <g clip-path="url(#lens)">
+              <path d="M0 365 105 290 175 318 250 258 345 280 435 205 560 220v340H0" fill="#D0D2C7"/>
+              <path d="M0 430 170 365 300 390 480 320l80 10v230H0" fill="#AAB5B2"/>
+              <path d="M310 100v370" stroke="#B19A37" stroke-width="16"/>
+              <path d="M302 135h16m-16 35h16m-16 35h16m-16 35h16m-16 35h16m-16 35h16m-16 35h16m-16 35h16" stroke="#FFF9DB" stroke-width="12"/>
+              <path d="M0 280h560M280 0v560" stroke="#303D45" stroke-width="2"/>
+              <path d="M180 270v20m40-20v20m40-20v20m40-20v20m40-20v20m40-20v20M270 180h20m-20 40h20m-20 120h20m-20 40h20" stroke="#303D45" stroke-width="2"/>
+              <circle cx="280" cy="280" r="30" stroke="#303D45" stroke-width="2" fill="none"/>
+            </g>
+          </svg>
+          <p>Сначала измерение. Затем решение.</p>
+        </div></div>
+</section>
+      <section class="documents" id="documents">
+        <h2>Основания для работы<br> и доверия измерениям</h2>
+        <p class="note">Пример — концепт для портфолио</p>
+        <details>
+          <summary>Условные сведения о поверке приборов</summary>
+          <p>Раздел для подтверждённых документов применяемого оборудования. Действующие свидетельства и заводские номера не приведены.</p>
+        </details>
+        <details>
+          <summary>Условные допуски и документы исполнителя</summary>
+          <p>Необходимый комплект проверяют по виду работ и требованиям проекта. Членство в СРО, лицензии и действующие допуски в концепте не заявлены.</p>
+        </details>
+      </section>
+      <section class="contact" id="contact">
+        <div>
+          <h2>Где требуется<br> точная отметка?</h2>
+          <p>Условный полевой отдел<br>
+            <a href="mailto:field@otmetka-mestnosti.example">field@otmetka-mestnosti.example</a>
+          </p>
+          <p>Опишите участок и назначение работ. Границы и исходную основу согласуем перед выездом.</p>
+        </div>
+        <form>
+          <label>Имя<input name="name" required minlength="2" autocomplete="name">
+          </label>
+          <label>Рабочая почта<input name="email" type="email" required autocomplete="email">
+          </label>
+          <label>Участок и задача<textarea name="message" required rows="4">Топографическая съёмка. Требуется согласовать границы работ.</textarea>
+          </label>
+          <label class="consent">
+            <input name="consent" type="checkbox" required>Согласен на демонстрационную проверку формы</label>
+          <button type="submit">Проверить задание на съёмку</button>
+          <p role="status">
+          </p>
+        </form>
+      </section>
+    <p class="visual-disclosure">Пример — концепт для портфолио. Изображения созданы ИИ и показывают вымышленные объекты.</p>
+</main>
+    <footer>
+      <a href="#home">⊕ Отметка местности</a>
+      <span>От наблюдения к исходной основе</span>
+      <a href="#fieldpack">К исходным данным</a>
+    </footer>
+    <script src="script.js">
+    </script>
+  </body>
+</html>

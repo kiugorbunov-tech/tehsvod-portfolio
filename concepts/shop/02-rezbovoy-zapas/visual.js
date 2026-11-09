@@ -1,0 +1,1 @@
+(()=>{const preference=matchMedia('(prefers-reduced-motion: reduce)');let cleanup=()=>{};function setup(){cleanup();if(preference.matches)return;}setup();preference.addEventListener('change',setup)})();

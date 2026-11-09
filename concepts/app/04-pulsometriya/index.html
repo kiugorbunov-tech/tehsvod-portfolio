@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Пульсометрия — фитнес-клуб</title>
+    <link rel="stylesheet" href="../../../fonts-lib/fonts.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <strong>Пульсометрия</strong>
+      <h1>У тренировки<br>есть своё время.</h1>
+      <p>Клубное приложение<br>MVP от 385 000 ₽</p>
+    </header>
+    <main>
+      <section>
+        <p class="phase">1. Клубная карта</p>
+        <article id="entry">
+          <div class="status">9:41 <span>● ▰</span>
+          </div>
+          <p>Пульсометрия</p>
+          <h2>Сила.<br>В вашем ритме.</h2><figure class="visual-hero" data-motion="hover"><img src="assets/hero.jpg" width="1536" height="1024" alt="Силовой зал с фиолетовым светом" fetchpriority="high"></figure>
+          <p>Место в группе — заранее.<br>Ваш ритм — в расписании.</p>
+          <button data-go="schedule">Открыть демокарту</button>
+          <small>Демонстрационный участник клуба</small>
+        </article>
+      </section>
+      <section>
+        <p class="phase">2. Расписание</p>
+        <article id="schedule">
+          <div class="status">9:41 <span>● ▰</span>
+          </div>
+          <h2>Ваша суббота</h2>
+          <div class="date">
+            <strong>07</strong>
+            <span>ноября<br>суббота</span>
+          </div>
+          <button class="classrow" data-name="Силовая база" data-time="10:00" aria-pressed="true">
+            <b>10:00</b>
+            <span>Силовая база<small>Зал 1 · 50 минут</small>
+            </span>
+          </button>
+          <button class="classrow" data-name="Мобильность" data-time="12:00" aria-pressed="false">
+            <b>12:00</b>
+            <span>Мобильность<small>Студия · 45 минут</small>
+            </span>
+          </button>
+          <button class="classrow" data-name="Силовая база" data-time="18:00" aria-pressed="false">
+            <b>18:00</b>
+            <span>Силовая база<small>Зал 1 · 50 минут</small>
+            </span>
+          </button>
+          <button data-go="training">О занятии</button>
+        </article>
+        <figure class="visual-story" data-motion="hover"><img src="assets/process.jpg" width="1536" height="1024" loading="lazy" alt="Зал для занятий на ковриках"><figcaption>Зал для занятий на ковриках</figcaption></figure>
+      </section>
+      <section>
+        <p class="phase">3. Выбор нагрузки</p>
+        <article id="training">
+          <div class="status">9:41 <span>● ▰</span>
+          </div>
+          <p id="training-time">7 ноября · 10:00</p>
+          <h2 id="training-name">Силовая<br>база</h2>
+          <p id="description">Базовые движения с собственным весом и свободными весами.</p>
+          <dl>
+            <div>
+              <dt>Длительность</dt>
+              <dd id="duration">50 минут</dd>
+            </div>
+            <div>
+              <dt>Уровень</dt>
+              <dd>Начальный</dd>
+            </div>
+            <div>
+              <dt>С собой</dt>
+              <dd>Форма, вода</dd>
+            </div>
+          </dl>
+          <button data-go="wait">Проверить места</button>
+        </article>
+      </section>
+      <section>
+        <p class="phase">4. Нет мест</p>
+        <article id="wait">
+          <div class="status">9:41 <span>● ▰</span>
+          </div>
+          <p>Выбранная группа</p>
+          <h2>Все места<br>заняты</h2>
+          <div class="zero">0<span>свободных мест</span>
+          </div>
+          <p>Можно встать в лист ожидания или выбрать такое же занятие вечером.</p>
+          <button id="waitlist" class="secondary">В лист ожидания</button>
+          <p id="wait-feedback" role="status">Лист ожидания пока пуст.</p>
+          <div class="alternative">
+            <span>Следующая группа</span>
+            <b>18:00</b>
+            <p>Силовая база · зал 1</p>
+          </div>
+          <button id="reserve">Демозапись на 18:00</button>
+        </article>
+      </section>
+      <section>
+        <p class="phase">5. Место закреплено</p>
+        <article class="pass" id="result">
+          <div class="status">9:41 <span>● ▰</span>
+          </div>
+          <p>Ваша тренировка</p>
+          <h2 id="result-title">Пример<br>брони</h2>
+          <div class="reservation">
+            <b id="result-time">18:00</b>
+            <p>7 ноября · суббота</p>
+          </div>
+          <h3 id="result-name">Силовая база</h3>
+          <p id="result-room">Зал 1 · 50 минут</p>
+          <div class="passline">
+            <span>Вход по клубной карте</span>
+            <b>Место в группе</b>
+          </div>
+          <button data-go="schedule" class="secondary">К расписанию</button>
+          <small>Пример — концепт для портфолио</small>
+          <p class="note" id="final-feedback" aria-live="polite">Клуб не получает эту бронь.</p>
+        </article>
+        <figure class="visual-story" data-motion="hover"><img src="assets/detail.jpg" width="1536" height="1024" loading="lazy" alt="Рукоятки гантелей"><figcaption>Рукоятки гантелей</figcaption></figure>
+      </section>
+    </main>
+    <footer>Пульсометрия · расписание, нагрузка и свободные места<p class="visual-disclosure">Изображения — ИИ-визуализации для концепта.</p></footer>
+    <script src="script.js">
+    </script>
+  </body>
+</html>
+
