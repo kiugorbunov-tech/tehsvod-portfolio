@@ -1,0 +1,9 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="robots" content="noindex"><title>Тех Свод Инжиниринг</title>
+<script>
+// Портфолио переехало на свой домен: переносим и путь (кейсы, концепты), старая страница студии ведёт на новый сайт
+var p = location.pathname.replace(/^\/tehsvod-portfolio\/?/, "");
+var to = /^site-tehsvod/.test(p) ? "https://tehsvodengineering.ru/" : "https://tehsvodengineering.ru/portfolio/" + p;
+location.replace(to + location.hash);
+</script>
+<meta http-equiv="refresh" content="0;url=https://tehsvodengineering.ru/portfolio/">
+</head><body><a href="https://tehsvodengineering.ru/">Сайт «Тех Свод Инжиниринг»</a></body></html>

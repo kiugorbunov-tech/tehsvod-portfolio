@@ -1,1 +1,0 @@
-(() => {const section=document.querySelector('.scene-details'),motion=matchMedia('(prefers-reduced-motion: reduce)');if(motion.matches)return;const observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){section.classList.add('is-view');observer.disconnect()}},{threshold:.15});observer.observe(section)})();
